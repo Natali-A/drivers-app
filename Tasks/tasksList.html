@@ -1,0 +1,23 @@
+<table>
+    <tr>
+      <th>Title</th>
+      <th>Scheduled for</th>
+      <th>Assign to</th>
+      <th>Address</th>
+      <th>LAT</th>
+      <th>LNG</th>
+    </tr>
+    <tr ng-repeat="task in data | filter:search ">
+      <td>{{task.title}}</td>
+      <td>{{task.scheduled_at}}</td>
+      <td>
+        <select ng-model="selectedDriver"
+                ng-options="x.name.first + ' ' + x.name.last for x in driversOptions"
+                ng-value="x._id"
+                ng-change="dropDownChanged($index, selectedDriver)"/>
+      </td>
+      <td>{{task.address}}</td>
+      <td>{{task.location.latitude}}</td>
+      <td>{{task.location.longitude}}</td>
+    </tr>
+</table>

@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Bringg's Delivery App</title>
+  </head>
+  <body ng-app="deliveryApp">
+    <div class="container">
+      <header class="header">
+        <h1>Welcome to Drivers App</h1>
+      <header>
+      <div class="drivers-on-map">
+        <div ng-controller="DriversController" class="aside aside-1">
+          <input type="input" ng-model="filterNameTxt" ng-change="filterNameChanged()"/>
+          <drivers-list ng-filter="filterNameTxt"></drivers-list>
+        </div>
+        <div ng-controller="MapController" class="map-ctrl aside aside-2">
+            <div id="map"></div>
+        </div>
+      </div>
+      <footer>
+        <div ng-controller="TasksController" class="task-list">
+          <tasks-list></tasks-list>
+        </div>
+      </footer>
+    <div>
+
+
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="Drivers/driversCtrl.js"></script>
+    <script src="Drivers/driversDirective.js"></script>
+    <script src="Drivers/driversFactory.js"></script>
+    <script src="Tasks/tasksCtrl.js"></script>
+    <script src="Tasks/tasksDirective.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABouZxxJ5eFfgQNlj8hIy6FXc3T2oQnQQ"></script>
+    <script src="Map/mapCtrl.js"></script>
+    <script src="Map/mapFactory.js"></script>
+
+  </body>
+</html>

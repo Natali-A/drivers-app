@@ -1,0 +1,108 @@
+/*
+******* index.html *********
+*/
+div.container {
+  display: flex;
+  /*flex-flow: row wrap;*/
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.container > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+header.header {
+  background: black;
+}
+.header h1 {
+  color: white;
+  font-family: cursive;
+}
+
+footer div.task-list {
+  background-color: white;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .aside-1    { flex: 3 0px; }
+  .aside-1 { order: 1; }
+  .aside-2 { order: 2; }
+  .footer  { order: 3; }
+}
+
+body {
+  padding: 2em;
+}
+
+div.drivers-on-map {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: white;
+}
+
+div.drivers-on-map div {
+  flex-grow: 1;
+}
+
+div.drivers-on-map div.map-ctrl {
+  flex-grow: 2;
+}
+
+/*
+******* Drivers.html *********
+*/
+header.drivers-list {
+    background-color: chartreuse;
+}
+
+section.drivers-list {
+    background-color: black;
+}
+
+section.drivers-list div.driver-data {
+    background-color: white;
+    max-width: 400px;
+    margin: 10px 10px;
+}
+
+div.driver-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+    align-content: flex-start;
+}
+
+div.driver-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.driver-header span.driver-details {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+div.options-btn input[type="button"].success {
+    background-color: #528CE0;
+}
+
+div.options-btn input[type="button"].error {
+    background-color: crimson;
+}
+/*
+******* MAP *********
+*/
+#map {
+  height: 450px;
+  width: 700px;
+}

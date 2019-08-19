@@ -1,0 +1,22 @@
+<header class="drivers-list">Drivers List</header>
+<section class="drivers-list" ng-repeat="driver in data | filter: { name: { first: filterNameTxt } }">
+    <div class="driver-data">
+        <div class="driver-header">
+            <span><img src={{driver.picture}} /></span>
+            <span class="driver-details">
+                <span>{{driver.name.first}} {{driver.name.last}}</span>
+                <span>Age: {{driver.age}}</span>
+            </span>
+        </div>
+        <div class="driver-footer">
+            <span>Tasks: </span>
+            <div class="options-btn">
+                <input type="button" title="show on map" value="location"
+                       class="success" ng-click="centerMap($index)"/>
+                <input type="button" title="remove" value="remove"
+                       class="error" ng-click="deleteDriver($index)"/>
+            </div>
+        </div>
+
+    </div>
+</section>
